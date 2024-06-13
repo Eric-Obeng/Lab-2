@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Todo List</h1>
+
+      <div class="controls hidden">
+        <div class="dropdown">
+          <button class="dropbtn">Filter</button>
+          <div class="dropdown-content">
+            <button id="filter-all">All</button>
+            <button id="filter-completed">Completed</button>
+            <button id="filter-in-progress">In Progress</button>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Sort</button>
+          <div class="dropdown-content sort-content">
+            <button id="sort-asc">Sort Date 🔼</button>
+            <button id="sort-desc">Sort Date 🔽</button>
+          </div>
+        </div>
+      </div>
+
+      <form id="todo-form" class="hidden">
+        <input type="text" id="title" placeholder="Title" required />
+        <textarea id="description" placeholder="Description"></textarea>
+        <input type="datetime-local" id="due-date" required />
+        <button type="button" id="add-button">Add Todo</button>
+      </form>
+      <ul id="todo-list"></ul>
+    </div>
+
+    <button id="show-form-button" class="add-button">+ Add Todo</button>
+
+    <script src="app.js"></script>
+  </body>
+</html>
